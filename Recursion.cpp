@@ -100,6 +100,7 @@ int main()
     else
     cout << "False";
 }
+
 Write a recursive function to calculate the exponentiation of a number.
   
 #include <iostream>
@@ -117,5 +118,58 @@ int main()
     int base = 2;
     int exponent = 3; 
     cout << expo(base, exponent); 
+    return 0;
+}
+
+Create a recursive function to find the greatest common divisor (GCD) of two integers.
+  
+#include <iostream>
+using namespace std;
+
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+
+    return gcd(b, a % b);
+}
+
+int main() {
+    int a = 48;
+    int b = 18;
+    
+    cout << "The GCD of " << a << " and " << b << " is: " << gcd(a, b) << endl;
+
+    return 0;
+}
+
+Implement a recursive function to generate all permutations of a string.
+  
+#include <iostream>
+#include <string>
+using namespace std;
+
+void generatePermutations(string prefix, string remaining) {
+    // Base case: If the remaining string is empty, print the prefix
+    if (remaining.empty()) {
+        cout << prefix << endl;
+        return;
+    }
+
+    // Recursive case: Generate permutations by appending each character from the remaining string
+    for (size_t i = 0; i < remaining.length(); ++i) {
+        // Choose the current character and remove it from the remaining string
+        char currentChar = remaining[i];
+        string newPrefix = prefix + currentChar;
+        string newRemaining = remaining.substr(0, i) + remaining.substr(i + 1);
+
+        // Recursively generate permutations with the updated prefix and remaining string
+        generatePermutations(newPrefix, newRemaining);
+    }
+}
+
+int main() {
+    string str = "abc";
+    generatePermutations("", str);
     return 0;
 }
