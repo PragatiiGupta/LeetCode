@@ -1,35 +1,33 @@
 /*
 Given a positive integer num, return true if num is a perfect square or false otherwise.
-A perfect square is an integer that is the square of an integer. In other words, it is the product of some integer with itself.
+A perfect square is an integer that is the square of an integer. In other words, it is the product of some integer with itself. Inbuilt functions like sqrt must not be used.
 
 Intuition
-To determine if a given number is a perfect square, we can calculate its square root and check if it's an integer.
+To determine if a given number is a perfect square, we can iterate from 1 to the square root of the number and check if the square of any integer equals the given number.
 
 Approach
-Calculate the square root of the given number.
-Check if the square root is an integer by comparing it with its integer value.
-If the square root is an integer, return true; otherwise, return false.
+Iterate from 1 to the square root of the given number.
+Check if the square of the current integer equals the given number.
+If a perfect square is found, return true; otherwise, return false.
 
 Complexity
-Time complexity: The time complexity of calculating the square root using sqrt() function is typically O(1) since it's an efficient mathematical operation. Therefore, the overall time complexity of the solution is O(1).
-Space complexity: The space complexity is also O(1) since we're using only a constant amount of extra space for storing the square root value.
+Time complexity: The time complexity is O(sqrt(num)), where num is the given number. We iterate up to the square root of num.
+Space complexity: The space complexity is O(1) since we're using only a constant amount of extra space.
 
 Code
 */
 
-#include <cmath>
-
 class Solution {
 public:
     bool isPerfectSquare(int num) {
-        // Calculate the square root of num
-        double squareRoot = sqrt(num);
-
-        // Check if the square root is an integer
-        if (squareRoot == static_cast<int>(squareRoot)) {
-            return true;
-        } else {
-            return false;
+        // Iterate from 1 to the square root of num
+        for (long long i = 1; i * i <= num; ++i) {
+            // Check if the square of current integer equals num
+            if (i * i == num) {
+                return true; // Found a perfect square
+            }
         }
+        return false; // No perfect square found
     }
 };
+
