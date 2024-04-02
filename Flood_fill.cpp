@@ -50,9 +50,7 @@ void dfs(int sr,int sc,vector<vector<int>>& image,vector<vector<int>>& vis, int 
             int ncol = sc+col[i];
             if(nrow>=0&&nrow<n&&ncol>=0&&ncol<m&&vis[nrow][ncol]==-1&&image[nrow][ncol]==color)
             dfs(nrow,ncol,image,vis,color,newColor);
-        }
-        
-        
+        }   
     }
 public:
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
