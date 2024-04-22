@@ -23,14 +23,12 @@ Space complexity: O(V)O(V) for the bfs vector and O(V)O(V) for the vis array, re
 
 Code
 */
-
- vector<int> bfsOfGraph(int V, vector<int> adj[]) {
+vector<int> bfsOfGraph(int V, vector<int> adj[]) {
         vector<int> bfs;
         queue<int> q;
         q.push(0);
         int vis[V] = {0};
         vis[0] = 1;
-        
         while(!q.size())
         {
             int node = q.front();
@@ -44,8 +42,6 @@ Code
                 q.push(it);
                 }
             }
-            
         }
-        return bfs;
-        
+        return bfs;   
     }
