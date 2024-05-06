@@ -18,8 +18,8 @@ Push it into the queue.
 Return the bfs vector containing the BFS traversal result.
 
 Complexity:
-Time complexity: O(V + E)O(V+E), where VV is the number of vertices and EE is the number of edges. In the worst case, each vertex and edge is visited once during the BFS traversal.
-Space complexity: O(V)O(V) for the bfs vector and O(V)O(V) for the vis array, resulting in a total space complexity of O(V)O(V) due to the storage required for the BFS traversal. Additionally, the space complexity of the queue is O(V)O(V) in the worst case when all vertices are in the queue at once.
+Time complexity: O(V + E), where VV is the number of vertices and EE is the number of edges. In the worst case, each vertex and edge is visited once during the BFS traversal.
+Space complexity: O(V) for the bfs vector and O(V) for the vis array, resulting in a total space complexity of O(V) due to the storage required for the BFS traversal. Additionally, the space complexity of the queue is O(V) in the worst case when all vertices are in the queue at once.
 
 Code
 */
