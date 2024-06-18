@@ -1,3 +1,4 @@
+/**
 Triplet Sum in Array.
 Given an array arr of size n and an integer X. Find if there's a triplet in the array which sums up to the given integer X.
 
