@@ -1,10 +1,7 @@
 /**
 Generating all possible Subsequences using Recursion including the empty one.
-
 Given an array. The task is to generate and print all of the possible subsequences of the given array using recursion.
-
 Examples: 
-
 Input : [1, 2, 3]
 Output : [3], [2], [2, 3], [1], [1, 3], [1, 2], [1, 2, 3], []
 
@@ -15,7 +12,6 @@ Intuition:
 To generate all subsequences of an array, we can use a recursive approach. At each step, we have two choices: either include the current element in the subsequence or exclude it. By considering all possible combinations of these choices, we can generate all possible subsequences.
 
 Approach:
-
 We define a recursive function printSubsequences that takes the array, the current index, a vector to store the current subsequence, and the length of the array as arguments.
 At each recursive call, we have two choices:
 Include the current element in the subsequence: We add the current element to the vector and make a recursive call with the next index.
@@ -27,7 +23,7 @@ Time Complexity:
 Let n be the length of the input array.
 Since each element has two choices (include or exclude), there are 2^n possible subsequences.
 For each subsequence, printing it takes O(n) time.
-Therefore, the total time complexity is O(2^n.n)
+Therefore, the total time complexity is O(2^n)
 
 Space Complexity:
 The space complexity is O(n) due to the space used by the recursion stack and the auxiliary vector to store each subsequence.
