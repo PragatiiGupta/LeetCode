@@ -1,3 +1,4 @@
+/**
 Check if frequencies can be equal.
 Given a string s which contains only lower alphabetic characters, check if it is possible to remove at most one character from this string in such a way that frequency of each distinct character becomes same in the string. Return true if it is possible to do else return false.
 
